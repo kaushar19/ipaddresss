@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/ipaddress.css">
+    <title>IP Address Checker</title>
+</head>
+
+<body>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- Start Code Here -->
+    
+     
+    <div class="container fluid">
+        <!-- Section -1 -->
+        <div class="row justify-content-center">
+            <div class="col-sm-10">
+                <p class="h1 text-center text-danger">IP address (Internet Protocol address)</p>
+                <p class="h5 pt-2">What is an IP address (Internet Protocol address)?</p>
+                <p><i>"An <span class="text-danger">Internet Protocol (IP)</span> address is a unique numerical
+                        identifier for every device or network that
+                        connects to the internet. Typically assigned by an <span class="text-danger">internet service
+                            provider (ISP)</span>, an IP address is
+                        an online device address used for communicating across the internet."</i></p>
+            </div>
+        </div>
+
+        <!-- Section-2 -->
+        <div class="row justify-content-center text-center">
+            <div class="col-6 disp1 p-5 m-2">
+                <p class="h3 pb-3">To Check Valid/Invalid <span>IP Address(IPv4)</span></p>
+
+                <label for="txtIp" class="form-label">
+                    <p class="h4">Enter IP Address:</p>
+                </label>
+                <input type="text" class="form-control mb-3" name="" id="txtIp" placeholder="Please Enter IP Address">
+
+                <button class="btn btn-danger mb-3" onclick="ipadd_click()">Click Here !</button>
+                <br>
+
+                <label for="screen" class="form-label">
+                    <p class="h4">Display Screen:</p>
+                </label>
+                <input type="text" class="form-control" name="" id="screen" placeholder="Valid/Invalid IP Address">
+
+            </div>
+        </div>
+        <!-- Section-3 -->
+        <div class="row justify-content-center">
+            <div class="col-sm-10">
+                <p>There are two versions of IP addresses that are commonly used on the internet: <span
+                        class="text-danger">IPv4</span> and <span class="text-danger">IPv6</span>. An
+                    IPv4
+                    address is expressed as a set of <span class="text-danger">four dotted decimal numbers</span>, where
+                    each <span class="text-danger">octet</span> is separated by a
+                    period,
+                    such as 192.168.35.4. The three digits in the first octet represent a particular network on the
+                    internet
+                    while the rest of the digits represent the actual <span class="text-danger">host</span> address
+                    within the local network, such as a
+                    workstation or a server. An IPv6 address represents eight groups of four hexadecimal digits
+                    separated by
+                    colons, such as 2620:cc:8000:1c82:544c:cc2e:f2fa:5a9b. </p>
+                <p>
+                    Each internet protocol address can send information to other IP addresses through discrete chunks
+                    known as packets. Each <span class="text-danger">network packet</span> contains the data being
+                    transferred along with a header
+                    containing the <span class="text-danger">metadata</span> of the packet.
+                </p>
+                <p class="h5">How do IP addresses work?</p>
+                <p>An IP address is part of the <span class="text-danger"> TCP/IP </span>suite of protocols. It works
+                    behind the scenes, helping devices
+                    and websites connect with each other on the internet.</p>
+                <p>Every time a request is made to access a website, the requesting computer needs to know where the
+                    website resides and how to reach it. This is where the IP address comes into play. The requesting
+                    computer connects to the network router, which connects to the <span class="text-danger"> web
+                        server</span> where the website lives.
+                    The web server then pulls the website information and sends it back to the requesting computer. Each
+                    device in this process -- including the computer, router and web server -- carries a uniquely
+                    identifiable IP address, without which the transfer of information will not take place.</p>
+                <!-- Ipv4 -->
+                <p class="h5">Types of IP Address</p>
+                <p>IP Address is of two types:</p>
+                <ol>
+                    <li class="h5">IPv4:</li>
+                    <p>Internet Protocol version 4. It consists of 4 numbers separated by the dots. Each number can be
+                        from 0-255 in decimal numbers. But computers do not understand decimal numbers, they instead
+                        change them to binary numbers which are only 0 and 1. Therefore, in binary, this (0-255) range
+                        can be written as (00000000 – 11111111). Since each number N can be represented by a group of
+                        8-digit binary digits. So, a whole IPv4 binary address can be represented by 32-bits of binary
+                        digits. In IPv4, a unique sequence of bits is assigned to a computer, so a total of (2^32)
+                        devices approximately = 4,294,967,296 can be assigned with IPv4. </p>
+                    <p class="h6 text-danger">IPv4 can be written as:</p>
+                    <p class="text-success">189.123.123.90</p>
+                    <p>
+                        <b>Classes of IPv4 Address: </b>There are around 4.3 billion IPv4 addresses and managing all
+                        those addresses without any scheme is next to impossible. Let’s understand it with a simple
+                        example. If you have to find a word from a language dictionary, how long will it take? Usually,
+                        you will take less than 5 minutes to find that word. You are able to do this because words in
+                        the dictionary are organized in alphabetical order. If you have to find out the same word from a
+                        dictionary that doesn’t use any sequence or order to organize the words, it will take an
+                        eternity to find the word. If a dictionary with one billion words without order can be so
+                        disastrous, then you can imagine the pain behind finding an address from 4.3 billion addresses.
+                        For easier management and assignment IP addresses are organized in numeric order and divided
+                        into the following 5 classes :
+                    </p>
+                    <img src="./Images/img2.png" alt="img2" class="img-fluid" height="auto" width="600">
+                    <p>A loopback address is a distinct reserved IP address range that starts from 127.0.0.0 ends at
+                        127.255.255.255 though 127.255.255.255 is the broadcast address for 127.0.0.0/8. The loopback
+                        addresses are built into the IP domain system, enabling devices to transmit and receive the data
+                        packets. The loopback address 127.0.0.1 is generally known as localhost.</p>
+                    <li class="h5">IPv6:</li>
+                    <p>But, there is a problem with the IPv4 address. With IPv4, we can connect only the above number of
+                        4 billion devices uniquely, and apparently, there are much more devices in the world to be
+                        connected to the internet. So, gradually we are making our way to IPv6 Address which is a
+                        128-bit IP address. In human-friendly form, IPv6 is written as a group of 8 hexadecimal numbers
+                        separated with colons(:). But in the computer-friendly form, it can be written as 128 bits of 0s
+                        and 1s. Since, a unique sequence of binary digits is given to computers, smartphones, and other
+                        devices to be connected to the internet. So, via IPv6 a total of (2^128) devices can be assigned
+                        with unique addresses which are actually more than enough for upcoming future generations.</p>
+                    <p class="text-danger">IPv6 can be written as:</p>
+                    <p class="text-success">2011:0bd9:75c5:0000:0000:6b3e:0170:8394</p>
+                </ol>
+                <p class="h5">IP address validation</p>
+                <p>Every computer connected to the Internet is identified by a unique four-part string, known as its
+                    Internet Protocol (IP) address. An IP address consists of four numbers (each between 0 and 255)
+                    separated by periods. The format of an IP address is a 32-bit numeric address written as four
+                    decimal numbers (called octets) separated by periods; each number can be written as 0 to 255 (e.g.,
+                    0.0.0.0 to 255.255.255.255).</p>
+                <p class="h6">Example of valid IP address</p>
+                <ul>
+                    <li>115.42.150.37</li>
+                    <li>192.168.0.1</li>
+                    <li>110.234.52.124</li>
+                </ul>
+                <p class="h6">Example of invalid IP address</p>
+                <ul>
+                    <li>210.110 – must have 4 octets</li>
+                    <li>255 – must have 4 octets</li>
+                    <li>y.y.y.y – the only digit has allowed</li>
+                    <li>255.0.0.y – the only digit has allowed</li>
+                    <li>666.10.10.20 – digit must between [0-255]</li>
+                    <li>4444.11.11.11 – digit must between [0-255]</li>
+                    <li>33.3333.33.3 – digit must between [0-255]</li>
+                </ul>
+                <!-- ipv6 -->
+                <p class="h5">IPv4 vs IPv6: What’s the difference?</p>
+                <p>Both IPv4 and IPv6 identify connected devices on the network. However, there are slight differences
+                    in the way they operate. IPv6 is the newer IP version and was introduced to address the limitations
+                    IPv4 posed on the availability of IP addresses.</p>
+                <p>The following is a list of differences between IPv4 and IPv6:</p>
+                <p>
+                <ul>
+                    <li>IPv4 is 32-bit, whereas IPv6 is 128-bit.</li>
+                    <li>In IPv4, binary bits are separated by a dot (.); IPv6 separates binary bits by a colon (:).</li>
+                    <li>IPv4 follows the numeric addressing method and IPv6 is <span
+                            class="text-danger">alphanumeric</span>.</li>
+                    <li>IPv4 offers 12 header fields and IPv6 offers eight header fields.</li>
+                    <li>IPv4 has <span class="text-danger">checksum</span>fields but IPv6 doesn't.</li>
+                    <li>IPv4 supports broadcast address, which is a type of special address that transmits data packets
+                        to every node on the network. IPv6 doesn't support broadcast, but instead uses a multicast
+                        address, which is a logical identifier for a collection of hosts on a network.</li>
+                    <li>IPv4 supports <span class="text-danger">Variable Length Subnet Mask</span>, but IPv6 doesn't.
+                    </li>
+                    <li>When mapping to <span class="text-danger">media access control addresses</span>, IPv4 uses the
+                        <span class="text-danger">Address Resolution Protocol</span>. IPv6
+                        uses the Neighbor Discovery Protocol, which uses stateless auto-configuration and address
+                        resolution.
+                    </li>
+                </ul>
+                </p>
+                <p class="h5">Classification of IP addresses</p>
+                <p>Here is a list of the five most common types of IP addresses:</p>
+                <ol>
+                    <li class="h5"> Private IP addresses</li>
+                    <p>Each device connected to a home network or a private network carries a <span
+                            class="text-danger">private IP address</span>.
+                        Private IP addresses are non-internet facing and are only used on an internal network. Devices
+                        with private IP addresses might include computers, tablets, smartphones, <span
+                            class="text-danger">Bluetooth</span> devices,
+                        smart TVs and printers. With the increasing popularity of <span class="text-danger">internet of
+                            things</span> products, the use
+                        of private IP addressing is likely to keep growing.</p>
+                    <li class="h5">Public IP addresses</li>
+                    <p>An ISP assigns these addresses, which enable a router to communicate with the internet or an
+                        outside network. Public IP addresses cover the entire network, meaning multiple devices sharing
+                        the same internet connection will also share the same public IP address.</p>
+                    <li class="h5">Dynamic IP addresses</li>
+                    <p>These IP addresses are constantly changing and a new <span class="text-danger">dynamic IP
+                            address</span> is assigned to a device
+                        every time it connects to the internet. ISPs buy large pools of IP addresses to assign to their
+                        customers automatically. They revolve and reuse these addresses between different customers to
+                        generate cost savings and to provide easier network management. A dynamic IP address also offers
+                        security benefits, as it's harder for cybercriminals to hack into a network interface if its IP
+                        is constantly changing.</p>
+                    <li class="h5">Static IP addresses</li>
+                    <p>Unlike dynamic IP addresses, <span class="text-danger">static IP addresses</span> never change
+                        once they're assigned by the
+                        network. While most internet users and businesses don't require static IP addresses, they're a
+                        requirement for businesses that wish to host their own web servers. A static IP address ensures
+                        that all websites and email addresses associated with a certain web server will always have a
+                        consistent IP address so it can be reached on the internet.</p>
+                    <li class="h5">Website IP addresses</li>
+                    <p>These are IP addresses for website owners who don't host their websites on their own servers but
+                        rely on a hosting company to do so. Website IP addresses are composed of the following two
+                        types:</p>
+                    <ul>
+                        <li><b>Shared.</b> This IP address is shared among many different websites and is mostly used by
+                            small businesses that use a managed hosting service, such as <span
+                                class="text-danger">WordPress</span>.</li>
+                        <li><b>Dedicated.</b> This is a unique IP address assigned to an individual website. Dedicated
+                            IP addresses help website owners avoid <span class="text-danger">getting blocked or
+                                blacklisted</span>, something that owners of shared IP addresses might face when
+                            malicious behavior is exhibited by other websites sharing the same IP. Owners of dedicated
+                            IP addresses can access their websites while waiting for a domain transfer.</li>
+                        <img src="./Images/img1.png" alt="img1" class="img-fluid" width="600" height="auto">
+                    </ul>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/ipaddress.js"></script>
+</body>
+
+</html>
